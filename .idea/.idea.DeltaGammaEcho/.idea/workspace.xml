@@ -1,11 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="18acfbef-c324-4a6f-bac0-92f8a96551d7" name="Default Changelist" comment="" />
+    <list default="true" id="18acfbef-c324-4a6f-bac0-92f8a96551d7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DeltaGammaEcho/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeltaGammaEcho/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DeltaGammaEcho/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeltaGammaEcho/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DeltaGammaEcho/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeltaGammaEcho/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_BoulderDash/Materials/stone_worldSpace_mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_BoulderDash/Materials/stone_worldSpace_mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_BoulderDash/Prefabs/Dirt.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_BoulderDash/Prefabs/Dirt.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_BoulderDash/Prefabs/Stone.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_BoulderDash/Prefabs/Stone.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_BoulderDash/Scenes/BoulderDash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_BoulderDash/Scenes/BoulderDash.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_BoulderDash/Sprites/Dirt 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_BoulderDash/Sprites/Dirt 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_BoulderDash/Sprites/Rock.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_BoulderDash/Sprites/Rock.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_BoulderDash/Sprites/Rock.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_BoulderDash/Sprites/Rock.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_BoulderDash/Sprites/dirt.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_BoulderDash/Sprites/dirt.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Rayman/Sprites/Checkers.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Rayman/Sprites/Checkers.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -13,10 +52,12 @@
         <option value="$PROJECT_DIR$/Assets/_Rayman/Scripts/AvatarInput.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoulderDash/Scripts/Dirt.cs" />
         <option value="$PROJECT_DIR$/Assets/_BoulderDash/Scripts/MinerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/_BoulderDash/Scripts/Boulder.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1i00tNmjog1TGuy1ZsAgl2VdxGL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,10 +81,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13004">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="13004" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -63,6 +104,8 @@
       <workItem from="1601054832852" duration="3358000" />
       <workItem from="1601105214656" duration="2051000" />
       <workItem from="1601198703907" duration="4378000" />
+      <workItem from="1601319065797" duration="1243000" />
+      <workItem from="1601360440554" duration="1688000" />
     </task>
     <servers />
   </component>
@@ -71,6 +114,18 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
@@ -139,10 +194,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="226" key="GridCell.Tab.3.right/2560.-598.1440.2520/0.0.2560.1400@0.0.2560.1400" timestamp="1601205212714" />
-    <state x="781" y="345" key="SettingsEditor" timestamp="1601055993856">
+    <state x="781" y="345" key="SettingsEditor" timestamp="1601319088699">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="781" y="345" key="SettingsEditor/2560.-598.1440.2520/0.0.2560.1400@0.0.2560.1400" timestamp="1601055993856" />
+    <state x="781" y="345" key="SettingsEditor/2560.-598.1440.2520/0.0.2560.1400@0.0.2560.1400" timestamp="1601319088699" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1601202655150">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
