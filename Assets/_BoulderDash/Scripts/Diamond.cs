@@ -4,10 +4,21 @@ namespace BoulderDash
 {
 	public class Diamond : BaseBlock
 	{
-		/// <inheritdoc />
-		public override bool AttemptOverlap(Vector2 pos)
+
+		/// <summary>
+		/// Clears current diamond block.
+		/// </summary>
+		private void Clear()
 		{
-			return false;
+			Destroy(gameObject);
+		}
+
+		/// <inheritdoc />
+		public override bool AttemptOverlap(Vector2 dir)
+		{
+			//TODO: add Points
+			Clear();
+			return true;
 		}
 	}
 }

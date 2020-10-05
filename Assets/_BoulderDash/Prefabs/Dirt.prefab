@@ -5003,7 +5003,7 @@ MonoBehaviour:
   _collider: {fileID: 6337487568160769948}
   _renderer: {fileID: 1653047127183553984}
   _audioSource: {fileID: 1653047128076433125}
-  _pitchRange: 0.1
+  _pitchRange: 0.3
   _particleGameObject: {fileID: 1653047127846832752}
 --- !u!82 &1653047128076433125
 AudioSource:
