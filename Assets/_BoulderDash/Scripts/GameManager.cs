@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace BoulderDash
 {
@@ -12,12 +14,6 @@ namespace BoulderDash
 		/// </summary>
 		[SerializeField]
 		private MinerMovement _miner;
-		
-		/// <summary>
-		/// UI manager.
-		/// </summary>
-		[SerializeField]
-		private UIManager _uiManager;
 
 		#endregion
 		
@@ -27,6 +23,11 @@ namespace BoulderDash
 		/// The Game manager instance.
 		/// </summary>
 		private static GameManager _instance;
+
+		/// <summary>
+		/// Collected diamonds.
+		/// </summary>
+		private int _collectedDiamonds;
 
 		#endregion
 		
@@ -44,6 +45,54 @@ namespace BoulderDash
 					_instance = FindObjectOfType<GameManager>();
 				}
 				return _instance;
+			}
+		}
+
+		/// <summary>
+		/// UI manager.
+		/// </summary>
+		public UIManager UIManager { get; set; }
+
+		/// <summary>
+		/// Collected diamonds.
+		/// </summary>
+		public int CollectedDiamonds
+		{
+			get => _collectedDiamonds;
+			set => _collectedDiamonds = value;
+		}
+
+		/// <summary>
+		/// Scene session.
+		/// </summary>
+		public SceneSession SceneSession { get; set; }
+
+		#endregion
+
+		#region Intialization
+
+		/// <summary>
+		/// Called on awake.
+		/// </summary>
+		private void Awake()
+		{
+			var test = GameManager.Instance;
+			SceneManager.LoadScene("BoulderDash_UI", LoadSceneMode.Additive);
+		}
+
+		#endregion
+
+		#region Methods
+
+		/// <summary>
+		/// Diamond collected.
+		/// </summary>
+		public void DiamondCollected()
+		{
+			_collectedDiamonds++;
+			if (SceneSession.TotalLevelDiamonds == _collectedDiamonds)
+			{
+				UIManager.GameView.IsTimerRunning = false;
 			}
 		}
 

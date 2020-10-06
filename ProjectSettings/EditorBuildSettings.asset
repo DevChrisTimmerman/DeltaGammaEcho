@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_BoulderDash/Scenes/BoulderDash.unity
+    guid: fa78925cd1e4cb64a9bb57396c632760
+  - enabled: 1
+    path: Assets/_BoulderDash/Scenes/BoulderDash_UI.unity
+    guid: 2ce653e97a66a1644a17a44629e83922
   m_configObjects: {}

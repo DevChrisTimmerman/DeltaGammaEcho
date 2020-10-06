@@ -17,26 +17,51 @@ namespace BoulderDash
 		private TextMeshProUGUI _elapsedTimeText;
 		
 		/// <summary>
-		/// Score.
+		/// Total level diamonds.
 		/// </summary>
 		[SerializeField]
-		private TextMeshProUGUI _score;
+		private TextMeshProUGUI _totalLevelDiamonds;
+		
+		/// <summary>
+		/// Collected diamonds.
+		/// </summary>
+		[SerializeField]
+		private TextMeshProUGUI _collectedDiamonds;
 
 		#endregion
 
 		#region Fields
 
 		/// <summary>
-		/// Is the timer currently running.
-		/// </summary>
-		private bool _isTimerRunning = true;
-		
-		/// <summary>
 		/// Elapsed time.
 		/// </summary>
 		private float _elapsedTime;
-		
-		
+
+		#endregion
+
+		#region Properties
+
+		/// <summary>
+		/// Total level diamonds.
+		/// </summary>
+		public TextMeshProUGUI TotalLevelDiamonds => _totalLevelDiamonds;
+
+		/// <summary>
+		/// Is the timer currently running.
+		/// </summary>
+		public bool IsTimerRunning { get; set; } = true;
+
+		#endregion
+
+		#region Initialization
+
+		/// <summary>
+		/// Called on start.
+		/// </summary>
+		private void Start()
+		{
+			_totalLevelDiamonds.text = GameManager.Instance.SceneSession.TotalLevelDiamonds.ToString();
+		}
 
 		#endregion
 
@@ -47,7 +72,7 @@ namespace BoulderDash
 		/// </summary>
 		private void Update()
 		{
-			if (_isTimerRunning)
+			if (IsTimerRunning)
 			{
 				_elapsedTime += Time.deltaTime;
 			}
@@ -61,7 +86,7 @@ namespace BoulderDash
 		private void UpdateUI()
 		{
 			_elapsedTimeText.text = _elapsedTime.ToString("F");
-			//TODO: update score.
+			_collectedDiamonds.text = GameManager.Instance.CollectedDiamonds.ToString(CultureInfo.InvariantCulture);
 		}
 
 		#endregion

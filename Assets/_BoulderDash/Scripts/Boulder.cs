@@ -13,6 +13,12 @@ namespace BoulderDash
 		/// </summary>
 		[SerializeField]
 		private float _duration;
+		
+		/// <summary>
+		/// Pivot used for rotation.
+		/// </summary>
+		[SerializeField]
+		private Transform _pivot;
 
 		#endregion
 
@@ -78,8 +84,8 @@ namespace BoulderDash
 			{
 				_startPos = transform.position;
 				_desiredPos = _startPos + (delta * GlobalVariables.TILE_SIZE);
-				_startRot = transform.rotation;
-				_desiredRot = Quaternion.Euler(0,0,transform.rotation.eulerAngles.z + (-90 * delta.x));
+				_startRot = _pivot.rotation;
+				_desiredRot = Quaternion.Euler(0,0,_pivot.rotation.eulerAngles.z + (-90 * delta.x));
 				Utils.DebugDrawScanner(_desiredPos, GlobalVariables.SPHERECAST_RADIUS);
 				if (Physics2D.OverlapCircle(_desiredPos, GlobalVariables.SPHERECAST_RADIUS) == false)
 				{
@@ -98,9 +104,9 @@ namespace BoulderDash
 		private IEnumerator MovementCoroutine(float duration)
 		{
 			_isMoving = true;
-			while (_currentMovementTime <= duration || Input.GetKeyDown(KeyCode.Escape))
+			while (_currentMovementTime <= duration)
 			{
-				transform.localRotation = Quaternion.Lerp(_startRot, _desiredRot, _currentMovementTime / _duration);
+				_pivot.localRotation = Quaternion.Lerp(_startRot, _desiredRot, _currentMovementTime / _duration);
 				transform.localPosition = Vector2.Lerp(_startPos, _desiredPos, _currentMovementTime / duration);
 				//Debug.Log($"Lerp A: {_startPos} // Lerp B: {_desiredPos} // {_currentMovementTime / duration}");
 			
@@ -110,7 +116,7 @@ namespace BoulderDash
 
 			//Finishing up.
 			transform.position = _desiredPos;
-			transform.rotation = _desiredRot;
+			_pivot.rotation = _desiredRot;
 			_isMoving = false;
 			_currentMovementTime = 0.0f;
 		}

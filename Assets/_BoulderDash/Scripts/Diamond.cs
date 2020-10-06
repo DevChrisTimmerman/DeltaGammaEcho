@@ -5,6 +5,8 @@ namespace BoulderDash
 	public class Diamond : BaseBlock
 	{
 
+		#region Methods
+
 		/// <summary>
 		/// Clears current diamond block.
 		/// </summary>
@@ -16,9 +18,11 @@ namespace BoulderDash
 		/// <inheritdoc />
 		public override bool AttemptOverlap(Vector2 dir)
 		{
-			//TODO: add Points
+			GameManager.Instance.DiamondCollected();
 			Clear();
 			return true;
 		}
+
+		#endregion
 	}
 }
