@@ -4,6 +4,33 @@ namespace BoulderDash
 {
 	public class MinerMovement : MonoBehaviour
 	{
+		#region Events
+
+		#region Turned
+
+		/// <summary>
+		/// Turned delegate.
+		/// </summary>
+		/// <param name="sender">The sender of the event.</param>
+		public delegate void TurnedDelegate(MinerMovement sender);
+
+		/// <summary>
+		/// Turned event.
+		/// </summary>
+		public event TurnedDelegate TurnedEvent;
+
+		/// <summary>
+		/// Turned event invocator.
+		/// </summary>
+		private void OnTurned()
+		{
+			TurnedDelegate handler = TurnedEvent;
+			if (handler != null) handler(this);
+		}
+
+		#endregion
+
+		#endregion
 
 		#region EditorFields
 
@@ -33,6 +60,11 @@ namespace BoulderDash
 		/// </summary>
 		private bool _canMove = true;
 
+		/// <summary>
+		/// Is the miner facing left.
+		/// </summary>
+		private bool _isFacingLeft;
+
 		#endregion
 	
 		#region Methods
@@ -55,6 +87,10 @@ namespace BoulderDash
 				{
 					input.x -= _stepSize;
 					_canMove = false;
+					if (_isFacingLeft == false)
+					{
+						Flip(0.333f);
+					}
 				}
 				else if (Input.GetKey(KeyCode.S))
 				{
@@ -65,6 +101,11 @@ namespace BoulderDash
 				{
 					input.x += _stepSize;
 					_canMove = false;
+					
+					if (_isFacingLeft)
+					{
+						Flip(0.333f);
+					}
 				}
 			}
 			else
@@ -94,21 +135,25 @@ namespace BoulderDash
 					transform.position += (Vector3)input;
 				}
 			}
-
-			/*//Move only when you are not overlapping a movementBlocker
-		if (Physics2D.OverlapCircle(transform.position + input, radius, _movementBlockingLayers) == false)
+		}
+		
+		/// <summary>
+		/// Flip the player.
+		/// </summary>
+		private void Flip(float delay)
 		{
-		}*/
-		
-		
-		
-		
-		
-		////Move only when there is a collider and it is not a movementBlocker
-		//if (Physics2D.OverlapCircle(transform.position + input, radius, ~_movementBlockingLayers))
-		//{
-		//	transform.position += input;
-		//}
+			// Switch the way the player is facing.
+			_isFacingLeft = !_isFacingLeft;
+			
+			OnTurned();
+
+			StartCoroutine(Utils.DoAfterTime(() =>
+			{
+				// Multiply the player's x local scale by -1.
+				Vector3 scale = transform.localScale;
+				scale.x *= -1;
+				transform.localScale = scale;
+			},delay));
 		}
 
 		/// <summary>
