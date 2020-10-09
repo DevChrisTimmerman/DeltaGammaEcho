@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Globalization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace BoulderDash
 {
@@ -13,20 +15,22 @@ namespace BoulderDash
 		/// <summary>
 		/// ElapsedTime.
 		/// </summary>
-		[SerializeField]
-		private TextMeshProUGUI _elapsedTimeText;
-		
+		[SerializeField] private TextMeshProUGUI _elapsedTimeText;
+
 		/// <summary>
 		/// Total level diamonds.
 		/// </summary>
-		[SerializeField]
-		private TextMeshProUGUI _totalLevelDiamonds;
-		
+		[SerializeField] private TextMeshProUGUI _totalLevelDiamonds;
+
 		/// <summary>
 		/// Collected diamonds.
 		/// </summary>
-		[SerializeField]
-		private TextMeshProUGUI _collectedDiamonds;
+		[SerializeField] private TextMeshProUGUI _collectedDiamonds;
+
+		/// <summary>
+		/// Diamond fill image.
+		/// </summary>
+		[SerializeField] private Image _diamondFillImage;
 
 		#endregion
 
@@ -36,6 +40,21 @@ namespace BoulderDash
 		/// Elapsed time.
 		/// </summary>
 		private float _elapsedTime;
+
+		/// <summary>
+		/// Desired fill amount.
+		/// </summary>
+		private float _desiredFillAmount;
+
+		/// <summary>
+		/// Current fill amount.
+		/// </summary>
+		private float _currentFillAmount;
+
+		/// <summary>
+		/// Timer.
+		/// </summary>
+		private float _timer;
 
 		#endregion
 
@@ -61,6 +80,7 @@ namespace BoulderDash
 		private void Start()
 		{
 			_totalLevelDiamonds.text = GameManager.Instance.SceneSession.TotalLevelDiamonds.ToString();
+			SetFillAmount(0.0f, 0);
 		}
 
 		#endregion
@@ -76,7 +96,7 @@ namespace BoulderDash
 			{
 				_elapsedTime += Time.deltaTime;
 			}
-			
+
 			UpdateUI();
 		}
 
@@ -85,10 +105,33 @@ namespace BoulderDash
 		/// </summary>
 		private void UpdateUI()
 		{
+			//Timer
 			_elapsedTimeText.text = _elapsedTime.ToString("F");
+
+			//_diamondFillImage.fillAmount = (float) GameManager.Instance.CollectedDiamonds / GameManager.Instance.SceneSession.TotalLevelDiamonds;
+
+			//Collected amount
 			_collectedDiamonds.text = GameManager.Instance.CollectedDiamonds.ToString(CultureInfo.InvariantCulture);
 		}
 
+		public void SetFillAmount(float percentage, float duration)
+		{
+			_desiredFillAmount = percentage;
+			StartCoroutine(FillCoroutine(duration));
+		}
+
+		private IEnumerator FillCoroutine(float duration)
+		{
+			while (_timer <= duration)
+			{
+				_diamondFillImage.fillAmount = Mathf.Lerp(_currentFillAmount, _desiredFillAmount, _timer / duration);
+				_timer += Time.deltaTime;
+				yield return null;
+			}
+
+			_timer = 0.0f;
+			_currentFillAmount = _desiredFillAmount;
+		}
 		#endregion
 
 	}

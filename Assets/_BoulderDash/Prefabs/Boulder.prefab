@@ -81,6 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 0.2
   _pivot: {fileID: 688867755931786591}
+  _audioSource: {fileID: 8133975269386117434}
 --- !u!50 &1899812348645692396
 Rigidbody2D:
   serializedVersion: 4
@@ -138,7 +139,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d5d7abdab33cae6468447d1fef5d8fe6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a7aebc79a506ee2428891ba3291145ab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

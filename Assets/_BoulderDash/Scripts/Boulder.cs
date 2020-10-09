@@ -19,6 +19,12 @@ namespace BoulderDash
 		/// </summary>
 		[SerializeField]
 		private Transform _pivot;
+		
+		/// <summary>
+		/// Audio source.
+		/// </summary>
+		[SerializeField]
+		private AudioSource _audioSource;
 
 		#endregion
 
@@ -89,6 +95,7 @@ namespace BoulderDash
 				Utils.DebugDrawScanner(_desiredPos, GlobalVariables.SPHERECAST_RADIUS);
 				if (Physics2D.OverlapCircle(_desiredPos, GlobalVariables.SPHERECAST_RADIUS) == false)
 				{
+					_audioSource.Play();
 					StartCoroutine(MovementCoroutine(_duration));
 					return true;
 				}

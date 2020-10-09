@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace BoulderDash
 {
@@ -20,38 +19,18 @@ namespace BoulderDash
 		[SerializeField]
 		private MinerMovement _minerMovement;
 
-		#endregion
+		private static readonly int LookAround = Animator.StringToHash("LookAround");
 
-		#region Fields
-
-		/// <summary>
-		/// Has turned trigger hash.
-		/// </summary>
-		private static readonly int HasTurned = Animator.StringToHash("HasTurned");
-
-		#endregion
-		
-		#region Initialization
-
-		/// <summary>
-		/// Called on start.
-		/// </summary>
-		private void Start()
-		{
-			_minerMovement.TurnedEvent += OnMinerTurned;
-		}
-		
 		#endregion
 
 		#region Methods
-		
-		/// <summary>
-		/// On miner turned.
-		/// </summary>
-		/// <param name="sender">MinerMovement</param>
-		private void OnMinerTurned(MinerMovement sender)
+
+		private void Update()
 		{
-			_animator.SetTrigger(HasTurned);
+			if (Input.GetKeyDown(KeyCode.L))
+			{
+				_animator.SetTrigger(LookAround);
+			}
 		}
 
 		#endregion

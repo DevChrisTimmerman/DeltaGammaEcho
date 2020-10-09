@@ -1,5 +1,5 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+
 
 namespace BoulderDash
 {
@@ -22,12 +22,41 @@ namespace BoulderDash
 
 		#endregion
 
+		#region Fields
+
+		/// <summary>
+		/// Random offset.
+		/// </summary>
+		private float _offset;
+
+		#endregion
+
+		#region Initialization
+
+		/// <summary>
+		/// Called upon start.
+		/// </summary>
+		private void Start()
+		{
+			_offset = UnityEngine.Random.Range(0, (2.0f*Mathf.PI)/_speed);
+		}
+
+		#endregion
+
+		#region Methods
+
+		/// <summary>
+		/// Called every frame.
+		/// </summary>
 		private void Update()
 		{
 			Vector2 pos = transform.localPosition; 
-			pos.y = _distance * Mathf.Sin(Time.realtimeSinceStartup * _speed);
+			pos.y = _distance * Mathf.Sin((Time.realtimeSinceStartup + _offset) * _speed);
 			transform.localPosition = pos; 
 			
 		}
+
+		#endregion
+
 	}
 }

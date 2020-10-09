@@ -89,7 +89,7 @@ namespace BoulderDash
 					_canMove = false;
 					if (_isFacingLeft == false)
 					{
-						Flip(0.333f);
+						Flip();
 					}
 				}
 				else if (Input.GetKey(KeyCode.S))
@@ -99,12 +99,12 @@ namespace BoulderDash
 				}
 				else if (Input.GetKey(KeyCode.D))
 				{
-					input.x += _stepSize;
 					_canMove = false;
+					input.x += _stepSize;
 					
 					if (_isFacingLeft)
 					{
-						Flip(0.333f);
+						Flip();
 					}
 				}
 			}
@@ -140,20 +140,16 @@ namespace BoulderDash
 		/// <summary>
 		/// Flip the player.
 		/// </summary>
-		private void Flip(float delay)
+		private void Flip()
 		{
 			// Switch the way the player is facing.
 			_isFacingLeft = !_isFacingLeft;
+			// Multiply the player's x local scale by -1.
+			Vector3 scale = transform.localScale;
+			scale.x *= -1;
+			transform.localScale = scale;
 			
 			OnTurned();
-
-			StartCoroutine(Utils.DoAfterTime(() =>
-			{
-				// Multiply the player's x local scale by -1.
-				Vector3 scale = transform.localScale;
-				scale.x *= -1;
-				transform.localScale = scale;
-			},delay));
 		}
 
 		/// <summary>

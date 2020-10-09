@@ -41,6 +41,33 @@ TextureImporter:
   - first:
       213: -7308323132832950697
     second: Miner_11
+  - first:
+      213: -5941402026957439485
+    second: Miner_12
+  - first:
+      213: 289793071197442076
+    second: Miner_13
+  - first:
+      213: -7300806943354975944
+    second: Miner_14
+  - first:
+      213: -1067853087769042555
+    second: Miner_15
+  - first:
+      213: 7451967949092891048
+    second: Miner_16
+  - first:
+      213: 3094555737799266883
+    second: Miner_17
+  - first:
+      213: -2062424814483527378
+    second: Miner_18
+  - first:
+      213: -6402847668828650129
+    second: Miner_19
+  - first:
+      213: 6269789424968437972
+    second: Miner_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -333,6 +360,237 @@ TextureImporter:
       bones: []
       spriteID: 6eee0f2dae68067a0800000000000000
       internalID: -6385955928491888922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miner_6
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 386
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459e67dc29e42b4d0800000000000000
+      internalID: -3120345199395018412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miner_11
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 386
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756d8b3f4de939a90800000000000000
+      internalID: -7308323132832950697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miner_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 490
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e7a6bd556eb8da0800000000000000
+      internalID: -5941402026957439485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miner_13
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 490
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10d71b434d850400800000000000000
+      internalID: 289793071197442076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miner_14
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 490
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8390f9f24c25eaa90800000000000000
+      internalID: -7300806943354975944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miner_15
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 490
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581e83f36493e21f0800000000000000
+      internalID: -1067853087769042555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miner_16
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 490
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a927431e55ba6760800000000000000
+      internalID: 7451967949092891048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miner_17
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 490
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3421c214c0212fa20800000000000000
+      internalID: 3094555737799266883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miner_18
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 490
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2922c4fe8bc063e0800000000000000
+      internalID: -2062424814483527378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miner_19
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 490
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65c78c08f38427a0800000000000000
+      internalID: -6402847668828650129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miner_20
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 490
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d09eb36344c20750800000000000000
+      internalID: 6269789424968437972
       vertices: []
       indices: 
       edges: []

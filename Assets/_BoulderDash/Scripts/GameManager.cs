@@ -90,6 +90,7 @@ namespace BoulderDash
 		public void DiamondCollected()
 		{
 			_collectedDiamonds++;
+			UIManager.GameView.SetFillAmount((float)_collectedDiamonds/SceneSession.TotalLevelDiamonds, 0.5f);
 			if (SceneSession.TotalLevelDiamonds == _collectedDiamonds)
 			{
 				UIManager.GameView.IsTimerRunning = false;
